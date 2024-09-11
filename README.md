@@ -103,9 +103,7 @@ If you have existing infrastructure managed via IaC, you'll have existing state.
     tofu apply
     ```
 
-3. Follow the [Massdriver Guide on Managing State](https://docs.massdriver.cloud/guides/managing-state).
-
-4. Set the following environment variables for migrating state to Massdriver (replace `<package name>` with package name from Massdriver):
+3. Set the following environment variables for migrating state to Massdriver. Be sure to replace `<package name>` with package name from Massdriver. Review the documentation on [managing state with Massdriver](https://docs.massdriver.cloud/guides/managing-state) for more details:
     ```bash
     export TF_HTTP_USERNAME=${MASSDRIVER_ORG_ID}
     export TF_HTTP_PASSWORD=${MASSDRIVER_API_KEY}
@@ -114,14 +112,14 @@ If you have existing infrastructure managed via IaC, you'll have existing state.
     export TF_HTTP_UNLOCK_ADDRESS=${TF_HTTP_ADDRESS}
     ```
 
-5. Uncomment the `backend` block in `providers.tf` and reinitialize:
+4. Uncomment the `backend` block in `providers.tf` and reinitialize:
     ```bash
     tofu init
     ```
 
-6. Approve the state migration. The state should now be in Massdriver.
+5. Approve the state migration. The state should now be in Massdriver.
 
-7. Redeploy the bundle on the Massdriver canvas and watch the logs. No resources should be added (just updates to bucket tags).
+6. Redeploy the bundle on the Massdriver canvas and watch the logs. No resources should be added (just updates to bucket tags).
 
 ## Step 5: Modifying the OpenTofu Module
 
