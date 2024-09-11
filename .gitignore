@@ -1,0 +1,17 @@
+
+### Terraform ###
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# plan files
+*.tfplan
+
+# For this example, ignore lock file (normally check this in)
+.terraform.lock.hcl
+
+# ignore bundle directory
+bundle
