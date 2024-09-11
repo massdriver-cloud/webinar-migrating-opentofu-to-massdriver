@@ -3,4 +3,4 @@
 
 [OpenTofu](https://github.com/opentofu/opentofu) is an infrastructure-as-code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. It is hosted by the Linux Foundation.
 
-This repo aims to help you get started using OpenTofu to manage your AWS resources.
+This repo contains materials for the Massdriver webinar on migrating OpenTofu modules into Massdriver bundles.
